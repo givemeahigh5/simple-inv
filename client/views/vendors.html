@@ -1,0 +1,29 @@
+<template name="vendors">
+	{{#if currentUser}}
+		<div class="container">
+
+			<header>
+				<div class="page-title"><h1>Vendor Maintenance</h1></div><div class="action-button"><button id="action-button">New Vendor</button></div>
+				<div class="action-form">
+					<form>
+						<input type="text" name="name" placeholder="Name" />{{> daySelect name="orderDay" defaultText="Order Day" defaultValue="-1"}}{{> daySelect name="delivDay" defaultText="Deliv Day" defaultValue="-1"}}<input type="text" class="number" name="orderMin" placeholder="Order Min"  /><button type="submit">Add</button>
+					</form>
+				</div>
+			</header>
+
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>Order Day</th>
+					<th>Deliv Day</th>
+					<th>Order Min</th>
+					<th>Active</th>
+					<th></th>
+				</tr>
+				{{#each vendors}}
+					{{> vendor}}
+				{{/each}}
+			</table>
+		</div>
+	{{/if}}
+</template>

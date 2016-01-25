@@ -1,0 +1,35 @@
+<template name="items">
+	{{#if currentUser}}
+		<div class="container">
+
+			<header>
+				<div class="page-title"><h1>Item Maintenance</h1></div><div class="action-button"><button id="action-button">New Item</button></div>
+				<div class="action-form">
+					<form>
+						<input type="text" name="name" placeholder="Item Name" /><select name="vendor">
+							<option>Vendor</option>
+							{{#each vendors}}
+								<option value="{{_id}}">{{name}}</option>
+							{{/each}}
+						</select><input type="text" class="number" name="countUnit" placeholder="Count Unit"  /><input type="text" class="number" name="orderUnit" placeholder="Order Unit"  /><input type="text" class="number" name="conversion" placeholder="Count/Order"  /><button type="submit">Add</button>
+					</form>
+				</div>
+			</header>
+
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>Vendor</th>
+					<th>Count Unit</th>
+					<th>Order Unit</th>
+					<th>Count/Order</th>
+					<th>Active</th>
+					<th></th>
+				</tr>
+				{{#each items}}
+					{{> item}}
+				{{/each}}
+			</table>
+		</div>
+	{{/if}}
+</template>

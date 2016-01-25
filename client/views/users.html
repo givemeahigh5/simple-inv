@@ -1,0 +1,25 @@
+<template name="users">
+		{{#if currentUser}}
+  <div class="container">
+    <header>
+      <h1>User Maintenance</h1>
+        
+      <form class="new-user">
+        <input type="text" name="name" placeholder="Name" />
+        <input type="text" name="email" placeholder="Email"  />
+        <button type="submit">Add</button>
+      </form>
+    </header>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+      {{#each users}}
+        {{> user}}
+      {{/each}}
+    </table>
+  </div>
+		{{/if}}
+</template>

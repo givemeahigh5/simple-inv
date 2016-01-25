@@ -1,0 +1,34 @@
+<template name="inventories">
+	{{#if currentUser}}
+		<div class="container">
+
+			<header>
+				<div class="page-title"><h1>Count Inventory</h1></div><div class="action-button"><!--button id="action-button">Select Inventory</button--></div>
+				<div class="action-form" id="visible-form">
+					<form>
+						Select Inventory: {{#with currentCount}}{{> selectCount}}{{/with}}
+						Show: {{> selectVendor vendor=currentVendor}}<button type="submit">View</button>
+					</form>
+				</div>
+			</header>
+
+			<table id="tableCount">
+				<tr>
+				    <th>Name</th>
+				    <th>Vendor</th>
+				    <th>Unit</th>
+				    <th>On Hand</th>
+				</tr>
+			{{#if items}}
+			{{else}}
+				<tr>
+					<td colspan=4>Sorry, No Results.</td>
+				</tr>
+			{{/if}}
+			{{#each items}}
+			    {{> inventoriesItem}}
+			{{/each}}
+			</table>
+		</div>
+	{{/if}}
+</template>

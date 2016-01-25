@@ -1,0 +1,15 @@
+<template name="item">
+    <tr>
+        <td><input class="text" type="text" name="name" value="{{name}}" /></td>
+        <td><select name="vendor" class="vendorSelect">
+            {{#each vendors}}
+                <option value="{{_id}}" {{selectIf ../vendorName name}}>{{name}}</option>
+            {{/each}}
+        </select></td>
+        <td><input class="number" type="text" name="countUnit" value="{{countUnit}}" /></td>
+        <td><input class="number" type="text" name="orderUnit" value="{{orderUnit}}" /></td>
+        <td><input class="number" type="text" name="conversion" value="{{conversion}}" /></td>
+        <td><input type="checkbox" checked="{{active}}" class="toggle-active" name="active" /></td>
+        <td><button class="delete">&times;</button></td>
+    </tr>
+</template>

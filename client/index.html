@@ -1,0 +1,42 @@
+<head>
+    <title>Inventory</title>
+</head>
+
+<body>
+</body>
+
+
+
+<template name="layout">
+    {{> userLinks}}
+    {{> topLinks}}
+
+    {{> yield}}
+</template>
+
+
+<template name="userLinks">
+    <div class='user-links'>
+        <div>
+            {{> login }}
+        </div>
+    </div>
+</template>
+
+
+<template name="topLinks">
+    <div class="top-links">
+        <div>
+            <ul>
+                <li class='title'><img id="logo" src="logo.jpg" /></li>{{#if currentUser}}<li id="link-inventories" class='link'><a href="{{pathFor 'inventories'}}">Count</a></li><li id="link-orders" class='link'><a href="{{pathFor 'orders'}}">Order</a></li><li id="link-items" class='link'><a href="{{pathFor 'items'}}">Items</a></li><li id="link-vendors" class='link'><a href="{{pathFor 'vendors'}}">Vendors</a></li>{{/if}}
+            </ul>
+        </div>
+    </div>
+</template>
+
+
+<template name="index">
+    <div class="container">
+        <h1>Welcome to The Inv. Please login or register to get started.</h1>
+    </div>
+</template>

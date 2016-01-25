@@ -1,0 +1,10 @@
+<template name="vendor">
+    <tr>
+        <td><input class="text" type="text" name="name" value="{{name}}" /></td>
+        <td>{{> daySelect name="orderDay" defaultValue=orderDay }}</td>
+        <td>{{> daySelect name="delivDay" defaultValue=delivDay }}</td>
+        <td><input class="text" type="text" name="orderMin" value="{{orderMin}}" /></td>
+        <td><input type="checkbox" checked="{{active}}" class="toggle-active" name="active" /></td>
+        <td><button class="delete">&times;</button></td>
+    </tr>
+</template>

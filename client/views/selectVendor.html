@@ -1,0 +1,9 @@
+
+<template name="selectVendor">
+	<select name="vendor">
+		<option value="0">All Vendors</option>
+		{{#each vendors}}
+			<option value="{{_id}}" {{selectIf ../vendor _id}}>{{name}}</option>
+		{{/each}}
+	</select>
+</template>

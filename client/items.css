@@ -1,0 +1,317 @@
+/* style.css */
+
+
+/* general layout */
+
+body {
+    font-family: "Verdana", sans-serif;
+    background-color: #6e809c;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.user-links {
+    display: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #dfdfdf;
+}
+
+.top-links {
+    display: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #082653;
+}
+
+.top-links > div,
+.user-links > div {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.user-links > div {
+    text-align: right;
+}
+
+.user-links > div > div {
+    position: relative;
+    display: inline-block;
+    padding: 6px 0;
+    vertical-align: middle;
+}
+
+.top-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.top-links ul li {
+    position: relative;
+    display: inline-block;
+    padding: 16px 0;
+    vertical-align: middle;
+}
+
+.top-links .title {
+    width: 36%;
+    padding: 9px 2% 10px 2%;
+}
+
+.top-links .link {
+    width: 15%;
+    height: 100%;
+    background-color: inherit;
+    text-align: center;
+}
+
+.top-links a {
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+    color: #efefef;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+header {
+    display: block;
+    margin: 20px auto;
+    padding: 0;
+    position: relative;
+    color: #082653;
+}
+
+#login-buttons {
+    float: right;
+    margin: 8px;
+}
+
+
+
+#logo {
+    display: block;
+    height: 32px;
+}
+
+
+.login-dropdown {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    padding: 20px;
+    top: 30px;
+    right: 0;
+    background-color: #dfdfdf;
+    text-align: right;
+    width: auto;
+    min-width: 100%;
+}
+
+
+/* section header */
+
+header div.page-title {
+    display: inline-block;
+    width: 600px;
+    text-align: left;
+}
+
+header div.action-button {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+}
+
+header div.action-button button {
+    background-color: #dfdfdf;
+    color: #082653;
+    font-size: 16px;
+}
+
+header div.action-form {
+    display: none;
+    position: relative;
+    width: 100%;
+    background-color: #dfdfdf;
+    padding: 24px 0;
+}
+
+header div#visible-form { display: table; }
+
+header div.action-form form {
+    display: table-cell;
+    position: relative;
+    width: auto;
+    white-space: nowrap;
+    text-align: center;
+}
+
+
+
+header input,
+.login-dropdown input {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 5px;
+}
+
+header select {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 9px 0;
+}
+
+h1 {
+    font-size: 1.4em;
+    margin: 0 0 10px 0;
+    display: block;
+    padding: 0;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin: 0;
+    display: block;
+    padding: 0;
+}
+/*
+form {
+  position: relative;
+  display: table-cell;
+  text-align: center;
+  width: auto;
+  max-width: 770px;
+  margin: 0 auto;
+}
+*/
+button,
+.login-dropdown button {
+    font-size: 14px;
+    background-color: #27cb2b;
+    padding: 10px 18px 11px 18px;
+    border: 0;
+    color: #efefef;
+}
+
+
+
+
+
+
+
+
+
+/* table styling */
+
+table {
+    width: 100%;
+    margin: 30px auto;
+    position:relative;
+    border-collapse:collapse;
+}
+
+tr { line-height:20px; background-color: #efefef; }
+tr:nth-of-type(odd) { background: #dfdfdf; }
+
+th {
+    background-color:#082653;
+    border:1px solid #082653;
+    border-right: 1px solid #24416c;
+    color:#fff;
+    padding:7px 6px;
+    text-align: left;
+    font-weight: normal;
+}
+
+th:last-child { border-right: 1px solid #082653; }
+
+td {
+    border: 1px solid #c4c4c4;
+    padding: 0 5px;
+    color: #082653;
+}
+
+table button { color: #082653; }
+
+#order td {
+    padding: 5px;
+}
+
+table#tableCount { display: none; }
+
+
+
+
+/* Element styling */
+
+a {
+    color: #990000;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+table input {
+    padding: 5px 0;
+    border: 0;
+    background-color: inherit;
+}
+
+.input:focus{
+  outline: 0;
+}
+
+
+.text {
+    width: 100%;
+}
+
+.number {
+    width: 100%;
+}
+
+form .number {
+    width: 80px;
+}
+
+.email {
+    width: 100%;
+}
+
+select {
+    width: 100%;
+    min-width: 140px;
+    border: 0;
+    padding: 2px;
+    background-color: inherit;
+}
+
+form select {
+    width: 140px;
+}
+
+
+.delete {
+  float: right;
+  font-weight: bold;
+  background: none;
+  font-size: 1em;
+  border: none;
+  position: relative;
+}

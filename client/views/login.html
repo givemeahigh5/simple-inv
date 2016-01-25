@@ -1,0 +1,17 @@
+<template name="login">
+    <div>
+        {{#if currentUser}}
+            Welcome, {{currentUser.username}}
+            <a class="logout-button" href="#">Logout</a>
+        {{else}}
+            <a class='login-button' href="#">Login</a>
+            <div class="login-dropdown">
+                <form id="login-form" action="action">
+                    <div>
+                        <input type="text" id="login-username" placeholder="Username" /><input type="Password" id="login-password" placeholder="password" /><button id="login-button">Login</button>
+                    </div>
+                </form>
+            </div>
+        {{/if}}
+    </div>
+</template>

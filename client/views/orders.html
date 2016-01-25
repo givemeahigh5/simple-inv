@@ -1,0 +1,34 @@
+<template name="orders">
+	{{#if currentUser}}
+		<div class="container">
+
+			<header>
+				<div class="page-title"><h1>Orders</h1></div><div class="action-button"><button id="action-button">Select Order</button></div>
+				<div class="action-form">
+					<form>
+						{{> weekSelect}}
+					</form>
+				</div>
+			</header>
+
+			<!--button type="submit" class="new-order">Submit Order</button-->
+			<table id="order">
+				<tr>
+					<th>Name</th>
+					<th>Vendor</th>
+					<th>Unit</th>
+					<th>On Hand</th>
+					<th>Daily Usage</th>
+					<th>This Deliv</th>
+					<th>Next Deliv</th>
+					<th>Min Need</th>
+					<th>Recom.</th>
+					<th>Order</th>
+				</tr>
+				{{#each itemsByCounter}}
+					{{> ordersItem}}
+				{{/each}}
+			</table>
+		</div>
+	{{/if}}
+</template>

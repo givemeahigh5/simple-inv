@@ -1,0 +1,9 @@
+
+<template name="selectCount">
+	<select name="count">
+		<option value="0">New Count</option>
+		{{#each counts}}
+			<option value="{{_id}}" {{selectIf ../_id _id}}>{{longDate}}</option>
+		{{/each}}
+	</select>
+</template>

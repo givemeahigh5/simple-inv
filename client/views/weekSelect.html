@@ -1,0 +1,22 @@
+<template name="weekSelect">
+    <select class="week-select">
+        <option value="{{thisWeek}}" {{selectIfWeek thisWeek}}>This Week</option>
+        <option value="{{lastWeek}}" {{selectIfWeek lastWeek}}>Last Week</option>
+    </select>
+</template>
+
+
+<template name="daySelect">
+    <select class="day-select" name="{{name}}">
+        {{#if defaultText}}
+            <option value="-1">{{defaultText}}</option>
+        {{/if}}
+        <option value="0" {{selectIfDay defaultValue '0'}}>Sunday</option>
+        <option value="1" {{selectIfDay defaultValue '1'}}>Monday</option>
+        <option value="2" {{selectIfDay defaultValue '2'}}>Tuesday</option>
+        <option value="3" {{selectIfDay defaultValue '3'}}>Wednesday</option>
+        <option value="4" {{selectIfDay defaultValue '4'}}>Thursday</option>
+        <option value="5" {{selectIfDay defaultValue '5'}}>Friday</option>
+        <option value="6" {{selectIfDay defaultValue '6'}}>Saturday</option>
+    </select>
+</template>
